@@ -1,0 +1,137 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body { padding-top: 35px; margin: 0%;}
+footer { margin-top: 100px; }
+table, td, th { vertical-align: middle; border: none; padding: 50px;}
+p{margin: 0%;}
+
+h1{
+	text-decoration: none; 
+	color:black; 
+	font-family: subTitle; 
+}
+
+.navbar-brand{
+	text-decoration: none; 
+	color:white; 
+	font-size: 30px; 
+	font-family: mainTitle; 
+	border-right: thick solid white;
+}
+
+@font-face {
+	font-family: mainTitle;
+	src: font-url('NonchalanceRegular.otf') format('opentype');
+
+}
+
+@font-face {
+	font-family: subTitle;
+	/*src: font-url("ChasingEmbersDemoVersion.ttf");*/
+	src: font-url('NonchalanceRegular.otf') format('opentype');
+
+}
+
+#home {
+ 	background-image: url("antoine-barres-198888.jpg");
+ }	
+
+ #loggedInHome {
+ 	background-image: url("lizzie-254530.jpg");
+ }	
+
+ .fadeIn {
+ 	opacity: 0;
+ 	animation: fadeIn 1.8s forwards;
+ }
+
+ .title_middle_white {
+ 	font-size: 8em;
+ 	color: white;
+ 	padding-top: 450px;
+ 	padding-left: 5px;
+ 	padding-bottom: 60px;
+ }
+
+ @media (max-width: 767px)  {
+   .title_middle_white {
+    font-size: 5em;}
+ }
+
+
+ .title_small_white {
+ 	font-size: 4em;
+ 	color: white;
+ 	padding-left: 5px;
+ 	padding-top: 180px;
+ 	padding-bottom: 30px;
+ }
+
+ @keyframes fadeIn {
+ 	0% {
+ 		opacity: 0;
+ 		transform: translateY(50px);
+ 	}
+ 	30% {
+ 		opacity: 0;
+ 	}
+ 	100% {
+ 		opacity: 1;
+ 		transform: translateY(0);
+ 	}
+ }
+
+.accordion > div {
+    display:none;
+  }
+  .accordion:hover > div {
+    display:block;
+  }
+
+
+#logInFormBackground {
+	background-image: url("suhyeon-choi-233819.jpg");
+}
+
+#signUpFormBackground {
+	background-image: url("lizzie-254527.jpg");
+}
+
+.backgroundLayout {
+	background-position: center center;
+ 	background-repeat: no-repeat;
+ 	background-attachment: fixed;
+ 	background-size: cover;
+ 	width: 100%;
+ 	height: 100%;
+ 	position: relative; 
+}
+
+.topSpacer {
+	padding-top: 10px;
+}
+
+.bottomSpacer{
+	padding-bottom:20px;
+}
+
+.containerBody{
+	padding-bottom: 60px;
+}
+
+.smallWidth{
+	width: 10%;
+}

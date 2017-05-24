@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col-md-8">
+		<%= image_tag(@idea.picture_url, width: 750) if @idea.picture.present? %>
+	</div>
+	<div class="col-md-4">
+		<p>
+			<strong>
+				<%= @idea.name%>
+			</strong>
+		</p>
+		<p>
+			<strong>
+				<%= @idea.coverage%>
+				<%= @idea.date%>
+				<%= @idea.rights%>
+			</strong>
+		</p>
+		<div class="reactionSetStyles">
+			<% Reaction::SENTIMENTS.each do |sentiment| %>
+			<%= link_to sentiment, idea_reactions_path(@idea, sentiment: sentiment), method: :post %> 
+			(<%= @idea.reactions.where(sentiment: sentiment).count %>)
+			<% end %>
+		</div>
+		<div style="padding-bottom: 20px;">
+			<%= @idea.description %>
+		</div> 
+	</div>
+</div>
+
+<div style="background-color: #e5e5ec;">
+	<div style="padding: 20px; background-color: #dadadd;">
+		<strong> Comments </strong>
+	</div>
+	<% @comments.each do |comment| %>
+	<div>
+		<strong><%= comment.user_name %></strong>
+		<%= comment.body %>
+		<hr>
+	</div>
+	<% end %>
+</div>
+<br>
+<% if user_signed_in? %>
+<%= render 'comments/form' %>
+<% end %>

@@ -1,0 +1,79 @@
+.landingPageHeader{
+  padding-top: 40px;
+  text-align: center;
+}
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.reactionSetStyles{
+  padding-bottom: 20px;
+}
+
+.buttonStyle{
+  padding-top: 20px;
+}
+
+.navbar-brand{
+ font-size: 30px; font-family: mainTitle; border-right: thick solid white;
+}
+
+.artwork {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  
+  figure {
+    background: #eee; 
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    position: relative;
+    height: 200px;
+    width: 300px;
+    margin: 0 0 1em 0; /* Adds some space between the title and the image – the four values are top, right, bottom, left */
+  }
+  
+  .sentiments {
+    /* This line means "hide the sentiments", because we only want to show them when we're hovered */
+    display: none;
+    
+    justify-content: space-between;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    /* This means black at 80% opacity */
+    background: rgba(0, 0, 0, 0.8); 
+  }
+  
+  /* When we hover, show the sentiments */
+  &:hover .sentiments {
+    display: flex;
+  }
+  
+  .sentiment {
+    padding: 0.5em;
+  }
+
+  .image_details{
+  	text-align: center;
+  }
+  
+  img {
+    max-height: 100%;
+  }
+  
+  h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+}
