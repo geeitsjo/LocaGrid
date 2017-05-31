@@ -53,6 +53,10 @@ h1{
  	background-image: url("lizzie-254530.jpg");
  }	
 
+ #personalFeedBackground {
+ 	background-image: url("scott-webb-248996");
+ }
+
  .fadeIn {
  	opacity: 0;
  	animation: fadeIn 1.8s forwards;
@@ -134,4 +138,10 @@ h1{
 
 .smallWidth{
 	width: 10%;
+}
+
+.instagramButton{
+	background-color: #3f729b;
+	padding: 15px;
+	color: white;
 }

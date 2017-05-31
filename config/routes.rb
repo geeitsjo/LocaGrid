@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'feed/personal'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :comments
-  get 'pages/info'
+  get 'feed/personal' 
 	root to: redirect('/ideas')
 	resources :ideas do
 		resources :reactions, only: :create

@@ -6,8 +6,9 @@
 </div>
 <br>
 
-<div class="actions topSpacer">
-  <%= link_to "Login with Instagram", Instagram.authorize_url(redirect_uri: ENV['REDIRECT_URI']) %>
+<div class="actions topSpacer instagramButton" style="color:white;">
+  <strong><%= link_to "Login with Instagram", Instagram.authorize_url(redirect_uri: ENV['REDIRECT_URI']) %>
+  </strong>
 </div>
 
 <br>

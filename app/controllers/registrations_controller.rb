@@ -12,11 +12,4 @@ class RegistrationsController < Devise::RegistrationsController
 	# 	redirect_to root_path
 	# end
 
-	def sign_up_params
-		params.require(:user).permit(:dp, :firstname, :last_name, :location, :website, :instagramid, :bio, :email, :password, :password_confirmation)
-	end
-
-	def account_update_params
-		params.require(:user).permit(:dp, :firstname, :last_name, :location, :website, :instagramid, :bio, :email, :password, :password_confirmation, :current_password)
-	end
 end
