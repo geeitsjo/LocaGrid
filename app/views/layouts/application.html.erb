@@ -27,7 +27,7 @@
         <% if user_signed_in? %>
         <ul class="nav navbar-nav">
         <li><a href="/ideas">Feed</a></li>
-          <li><a href="feed/personal">Mine</a></li>
+          <li><a href="<%= user_path(current_user)%>">Mine</a></li>
 
         </ul>
         <% end %>

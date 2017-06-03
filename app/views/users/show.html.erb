@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<% if !user_signed_in? %>
+<div id="home" class="backgroundLayout">
+	<div class="fadeIn title_middle_white">
+		locagrid
+	</div>
+</div>
+<% else %>
+<div id="personalFeedBackground" class="backgroundLayout">
+	<div class="fadeIn title_middle_white">
+		your talent
+	</div>
+</div>
+<% end %>
+
+<div class="landingPageHeader">
+	<h1>
+		love: <%= @user.firstname %>
+	</h1>
+	<h5>Wellington, New Zealand</h5>
+	<br>
+	<% if user_signed_in? %>
+	<div style="text-align: center; background-color: #e7e7e7; color: black; padding: 15px; margin-bottom: 50px;">
+		<%= link_to 'New Art Work', new_idea_path %>
+	</div>
+	<% end %>
+	<br>
+</div>
+
+<div class="gallery">
+	<% @user_posts.each do |idea| %>
+	<div class="artwork">
+		<figure>
+			<a href="<%= idea_url(idea) %>"><%= image_tag idea.picture_url, width: '100%' if idea.picture.present?%></a>
+			<div class="sentiments">
+				<div class="sentiment">
+					Like (<%= idea.reactions.where(sentiment: "Like").count %>)
+				</div>
+				<div class="sentiment">
+					Love (<%= idea.reactions.where(sentiment: "Love").count %>)
+				</div>
+				<div class="sentiment">
+					Sad (<%= idea.reactions.where(sentiment: "Sad").count %>)
+				</div>
+				<div class="sentiment">
+					Confuse (<%= idea.reactions.where(sentiment: "Confuse").count %>)
+				</div>
+				<div class="sentiment">
+					Angry (<%= idea.reactions.where(sentiment: "Angry").count %>)
+				</div> 
+			</div>
+		</figure>
+	</div>
+	<% end %>
+</div>
