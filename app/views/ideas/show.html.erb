@@ -3,37 +3,48 @@
 		<%= image_tag(@idea.picture_url, width: 750) if @idea.picture.present? %>
 	</div>
 	<div class="col-md-4">
-		<p>
+		<p style="font-family: Abril Fatface; font-size: 1.5em; line-height: 1.2em;" >
 			<strong>
 				<%= @idea.name%>
 			</strong>
-		</p>
-		<p>
+		</p><br>
+		<p style="font-family: Josefin Sans; font-size: 1.25em; line-height: 1.2em;">
 			<strong>
+				By: <%= link_to @user.firstname, @user %> <br>
 				<%= @idea.coverage%>
 				<%= @idea.date%>
 				<%= @idea.rights%>
 			</strong>
-		</p>
-		<div class="reactionSetStyles">
+			<% if current_user == @user %>
+			<td>
+				<%= link_to 'Edit', edit_idea_path(@idea) %>
+			</td>
+			<td>
+				<%= link_to 'Destroy', @idea, method: :delete, data: { confirm: 'Are you sure?' } %>
+			</td>
+			<% end %>
+		</p><br>
+		<div class="reactionSetStyles" style="font-family: Josefin Sans; font-size: 1.25em; line-height: 1.2em;">
 			<% Reaction::SENTIMENTS.each do |sentiment| %>
 			<%= link_to sentiment, idea_reactions_path(@idea, sentiment: sentiment), method: :post %> 
 			(<%= @idea.reactions.where(sentiment: sentiment).count %>)
 			<% end %>
 		</div>
-		<div style="padding-bottom: 20px;">
-			<%= @idea.description %>
+		<div style="padding-bottom: 20px; font-family: Josefin Sans; font-size: 1.25em; line-height: 1.2em;">
+			<strong> Description: </strong> <%= @idea.description %>
 		</div> 
 	</div>
 </div>
 
+<br><br>
+
 <div style="background-color: #e5e5ec;">
-	<div style="padding: 20px; background-color: #dadadd;">
+	<div style="font-family: Josefin Sans; font-size: 1.5em; padding: 15px; color: white; background-color: #8F8F91;">
 		<strong> Comments </strong>
 	</div>
 	<% @comments.each do |comment| %>
-	<div>
-		<strong><%= comment.user_name %></strong>
+	<div style="font-family: Josefin Sans; font-size: 1.25em; padding-top: 15px; padding-left: 15px; background-color: #dadadd;">
+		<strong><%= comment.user_name %>:</strong>
 		<%= comment.body %>
 		<hr>
 	</div>

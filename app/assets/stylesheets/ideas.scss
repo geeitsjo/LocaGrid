@@ -3,14 +3,20 @@
   text-align: center;
 }
 
-
 .gallery {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
+.col-md-8 img {
+  width: 100%;
+  height: auto;
+}
+
+
 .reactionSetStyles{
+  font-family: Josefin Sans;
   padding-bottom: 20px;
 }
 
@@ -36,6 +42,7 @@
     height: 200px;
     width: 300px;
     margin: 0 0 1em 0; /* Adds some space between the title and the image – the four values are top, right, bottom, left */
+    overflow:hidden
   }
   
   .sentiments {
@@ -63,11 +70,12 @@
   }
 
   .image_details{
-  	text-align: center;
+    text-align: center;
   }
   
   img {
-    max-height: 100%;
+    min-width:100% ; 
+    min-height:100%
   }
   
   h4 {

@@ -12,6 +12,7 @@ class IdeasController < ApplicationController
   def show
     @comments = @idea.comments.all
     @comment = @idea.comments.build
+    @user = @idea.user(params[:id])
   end
 
   # GET /ideas/new

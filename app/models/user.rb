@@ -5,4 +5,5 @@ class User < ApplicationRecord
   :recoverable, :rememberable, :trackable, :validatable
 
   has_many :ideas
+  mount_uploader :dp, DpUploader
 end
