@@ -6,7 +6,13 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :comments
   resources :users
-  root to: redirect('/ideas')
+  
+  devise_scope :user do 
+   root to: redirect('/ideas')
+    match '/sessions/user', to: 'devise/sessions#create', via: :post
+  end
+
+  
   resources :ideas do
     resources :reactions, only: :create
 
