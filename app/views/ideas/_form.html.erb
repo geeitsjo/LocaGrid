@@ -13,25 +13,25 @@
 
 <br>
 <div class="field">
-  <%= f.file_field :picture %>
+  <%= f.file_field :picture, required: true %>
 </div><br>
 
 <div class="field">
   <%= f.label "Title" %>
   <br>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, required: true %>
 </div><br>
 
 <div class="field">
   <%= f.label "Description" %>
   <br>
-  <%= f.text_area :description %>
+  <%= f.text_area :description, required: true %>
 </div><br>
 
 <div class="field bottomSpacer">
   <%= f.label "Location" %>
   <br>
-  <%= f.text_area :coverage %>
+  <%= f.text_area :coverage, required: true %>
 </div><br>
 
 
@@ -39,7 +39,7 @@
 <div class="field bottomSpacer">
   <%= f.label "Finish Date" %>
   <br>
-  <%= f.number_field :date %>
+  <%= f.number_field :date, required: true %>
 </div>
 
 
@@ -55,15 +55,15 @@
   </div>
 
   <div class="field bottomSpacer">
+    <%= f.label :subject %>
+    <br>
+    <%= f.text_area :subject %>
+  </div> 
+  
+  <div class="field bottomSpacer">
     <%= f.label :identifier %>
     <br>
     <%= f.text_area :identifier%>
-  </div>
-
-  <div class="field bottomSpacer">
-    <%= f.label "Art Type" %>
-    <br>
-    <%= f.text_field :artformat%>
   </div>
 
   <div class="field bottomSpacer">
@@ -73,21 +73,21 @@
   </div>
 
   <div class="field bottomSpacer">
-    <%= f.label :rights %>
+    <%= f.label "Art Format" %>
     <br>
-    <%= f.text_field :rights %>
-  </div>
-
-  <div class="field bottomSpacer">
-    <%= f.label :subject %>
-    <br>
-    <%= f.text_area :subject %>
+    <%= f.text_field :artformat%>
   </div>
 
   <div class="field bottomSpacer">
     <%= f.label "Art type" %>
     <br>
     <%= f.text_area :arttype %>
+  </div>
+
+  <div class="field bottomSpacer">
+    <%= f.label :rights %>
+    <br>
+    <%= f.text_field :rights %>
   </div>
 </div>
 </div>

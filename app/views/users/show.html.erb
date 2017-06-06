@@ -1,60 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<% if !user_signed_in? %>
-<div id="home" class="backgroundLayout">
-	<div class="fadeIn title_middle_white">
-		locagrid
-	</div>
-</div>
-<% else %>
 <div id="personalFeedBackground" class="backgroundLayout">
 	<div class="fadeIn title_middle_white">
 		your talent
 	</div>
 </div>
-<% end %>
 
 <div class="landingPageHeader userProfileHeader">
 	<div id="avatar">
-		<%= image_tag(@user.dp_url, :size => "250x250") if @user.dp.present? %>
+		<%= image_tag(@user.dp_url, :size => "200x200") if @user.dp.present? %>
 	</div>
-
 	<ul>
 		<li><h1 style="font-size:2em"><%= @user.firstname + " " + @user.lastname%></h1></li><br>
 		<li><h4 style="font-family: Josefin Sans; font-size: 1.5em">Location: <%= @user.location %></h4></li>
 
 		<%if !@user.website.blank? %>
-			<li><h4 style="font-family: Josefin Sans; font-size: 1.5em">Website: <a href="<%= @user.website %>"><%= @user.website %></a></h4></li>
+		<li><h4 style="font-family: Josefin Sans; font-size: 1.5em">Website: <a href="<%= @user.website %>"><%= @user.website %></a></h4></li>
 		<%end%>
 
 		<%if !@user.email.blank? %>
-			<li><h4 style="font-family: Josefin Sans; font-size: 1.5em">Contact: <%= @user.email %></h4></li>
+		<li><h4 style="font-family: Josefin Sans; font-size: 1.5em">Contact: <%= @user.email %></h4></li>
 		<%end%>
 
 		<%if !@user.bio.blank? %>
-			<li><h4 style="font-family: Josefin Sans; font-size: 1.5em">Bio: <%= @user.bio %></h4></li>
+		<li><h4 style="font-family: Josefin Sans; font-size: 1.5em">Bio: <%= @user.bio %></h4></li>
 		<%end%>
-		
 	</ul>
 	<br>
 	<% if current_user == @user %>
-	<div style="text-align: center; background-color: #e7e7e7; color: black; padding: 15px; margin-bottom: 50px; font-family: Josefin Sans; font-size: 1.5em;">
-		<strong>
-			<%= link_to 'New Art Work', new_idea_path %> 
-		</strong>
+	<div id="ugly_links">
+		<div class="ugly">
+			<%= link_to 'New Art Work', new_idea_path, :class => 'button-link' %> 
+			<br>
+		</div>
+		<div class="ugly">
+			<%= link_to 'Edit profile', edit_user_registration_path, :class => 'button-link' %>  
+		</div>
 	</div>
-	<div style="text-align: center; background-color: #e7e7e7; color: black; padding: 15px; margin-bottom: 50px; font-family: Josefin Sans; font-size: 1.5em;">
-		<strong>
-		<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>  
-		</strong>
-	</div>
-
 	
 	<% end %>
 </div>
-
-
-
+<hr>
 <div class="gallery">
 	<% @user_posts.each do |idea| %>
 	<div class="artwork">
