@@ -7,7 +7,17 @@
 			<strong>
 				<%= @idea.name%>
 			</strong>
-		</p><br>
+		</p>
+		<% if current_user == @user %>
+		<td>
+			<%= link_to 'Edit |', edit_idea_path(@idea), class: 'link-to-text-color' %>
+		</td>
+		<td>
+			<%= link_to 'Destroy', @idea, class: 'link-to-text-color', method: :delete, data: { confirm: 'Are you sure?' }%>
+		</td>
+		<br>
+		<% end %>
+		<br>
 		<p style="font-family: Josefin Sans; font-size: 1.25em; line-height: 1.2em;">
 			<strong>
 				By: <%= link_to @user.firstname, @user %> <br>
@@ -15,14 +25,6 @@
 				<%= @idea.date%>
 				<%= @idea.rights%>
 			</strong>
-			<% if current_user == @user %>
-			<td>
-				<%= link_to 'Edit', edit_idea_path(@idea) %>
-			</td>
-			<td>
-				<%= link_to 'Destroy', @idea, method: :delete, data: { confirm: 'Are you sure?' } %>
-			</td>
-			<% end %>
 		</p><br>
 		<div class="reactionSetStyles" style="font-family: Josefin Sans; font-size: 1.25em; line-height: 1.2em;">
 			<% Reaction::SENTIMENTS.each do |sentiment| %>
@@ -44,8 +46,12 @@
 	</div>
 	<% @comments.each do |comment| %>
 	<div style="font-family: Josefin Sans; font-size: 1.25em; padding-top: 15px; padding-left: 15px; background-color: #dadadd;">
-		<strong><%= comment.user_name = current_user.firstname + " " + current_user.lastname %>:</strong>
-		<%= comment.body %>
+		<strong><%= comment.user_name%>:</strong>
+		<%= comment.body %> <br>
+		<% if current_user == @comment %>
+		<td><%= link_to 'Edit |', edit_comment_path(comment),  class: 'link-to-text-color' %></td>
+		<td><%= link_to 'Destroy', comment,  class: 'link-to-text-color', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<% end %>
 		<hr>
 	</div>
 	<% end %>

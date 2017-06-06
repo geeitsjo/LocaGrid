@@ -19,8 +19,8 @@
         <li style="display: flex; flex-direction: row;">
 
           <% if user_signed_in? %>
-          <li><a href="/ideas">Feed</a></li>
-          <li><a href="<%= user_path(current_user)%>"> <%= current_user.firstname %> 's Work</a></li>
+          <li><a href="/ideas" class="navbar-link">Feed</a></li>
+          <li><a href="<%= user_path(current_user)%>" class="navbar-link"> <%= current_user.firstname  %> 's Work</a></li>
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
           <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> 

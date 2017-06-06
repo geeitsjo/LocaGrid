@@ -10,6 +10,8 @@ class CommentsController < ApplicationController
   # GET /comments/1
   # GET /comments/1.json
   def show
+    @user = @comment.idea(params[:id])
+    @comment=@comment.user(params[:id])
   end
 
   # GET /comments/new
@@ -42,8 +44,9 @@ class CommentsController < ApplicationController
   # PATCH/PUT /comments/1.json
   def update
     respond_to do |format|
+      @idea = @comment.idea(params[:id])
       if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to @idea, notice: 'Comment was successfully updated.' }
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
