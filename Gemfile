@@ -10,7 +10,6 @@ end
 gem 'rails', '~> 5.0.2'
 gem 'carrierwave'
 gem 'devise'
-gem 'devise'
 gem 'instagram'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'

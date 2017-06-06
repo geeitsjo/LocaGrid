@@ -35145,3 +35145,570 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 255ms (Views: 248.7ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/" for ::1 at 2017-06-06 12:37:17 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/ideas" for ::1 at 2017-06-06 12:37:17 +1200
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mIdea Load (1.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Like"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Angry"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Like"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Love"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Angry"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Like"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Angry"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Like"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Angry"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Like"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Angry"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Like"]]
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Angry"]]
+  Rendered ideas/index.html.erb within layouts/application (148.8ms)
+Completed 200 OK in 1217ms (Views: 1184.6ms | ActiveRecord: 15.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-06-06 12:37:29 +1200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rbbTBot9i570RaKW3agO6rnbzbS0KRlE3pXJqAxucvKfDC7NzagdGwqc/yqN7JsARV/WOBMbr/FMaiDxAFY/7g=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-06-06 12:37:29 +1200
+Started GET "/ideas" for ::1 at 2017-06-06 12:37:29 +1200
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Angry"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Angry"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Like"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Love"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Angry"]]
+  Rendered ideas/index.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 199ms (Views: 191.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-06-06 12:37:39 +1200
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 173ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-06-06 12:37:43 +1200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (61.9ms)
+Completed 200 OK in 191ms (Views: 189.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-06-06 12:37:49 +1200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cyQguLfgdqb4Yr3GmIsmcoirosM58ffp+AmDNO9FFRCbA3So9TTPuY6x9W7nHq8NYKiP+CwqF1ICSdWq3Vw18w==", "user"=>{"email"=>"toni@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "toni@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-06-06 00:37:49 UTC], ["last_sign_in_at", 2017-06-06 00:07:04 UTC], ["sign_in_count", 13], ["updated_at", 2017-06-06 00:37:49 UTC], ["id", 8]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 191ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/" for ::1 at 2017-06-06 12:37:49 +1200
+Started GET "/ideas" for ::1 at 2017-06-06 12:37:49 +1200
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Like"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Angry"]]
+  Rendered ideas/index.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 171ms (Views: 164.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/ideas/19" for ::1 at 2017-06-06 12:38:21 +1200
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+DEPRECATION WARNING: Passing an argument to force an association to reload is now deprecated and will be removed in Rails 5.1. Please call `reload_user` instead. (called from show at /Users/Jarius/Desktop/locagrid/app/controllers/ideas_controller.rb:15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 19]]
+  Rendered comments/_form.html.erb (5.8ms)
+  Rendered ideas/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 189ms (Views: 154.0ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/ideas/19/reactions?sentiment=Like" for ::1 at 2017-06-06 12:38:25 +1200
+Processing by ReactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"5MqT7fHgFyVMSPuXTq2vC2kaE7fOUwB+nlXeI0cmqBRqijKYOmw+mP/jYTzjmrJhzIXTmFnFjGDoLoveQwvfDg==", "sentiment"=>"Like", "idea_id"=>"19"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reactions" ("sentiment", "idea_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["sentiment", "Like"], ["idea_id", 19], ["created_at", 2017-06-06 00:38:25 UTC], ["updated_at", 2017-06-06 00:38:25 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/ideas/19
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/ideas/19" for ::1 at 2017-06-06 12:38:25 +1200
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+DEPRECATION WARNING: Passing an argument to force an association to reload is now deprecated and will be removed in Rails 5.1. Please call `reload_user` instead. (called from show at /Users/Jarius/Desktop/locagrid/app/controllers/ideas_controller.rb:15)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 19]]
+  Rendered comments/_form.html.erb (1.6ms)
+  Rendered ideas/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 154ms (Views: 149.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/ideas/19/reactions?sentiment=Like" for ::1 at 2017-06-06 12:38:27 +1200
+Processing by ReactionsController#create as HTML
+  Parameters: {"authenticity_token"=>"O3y16Ifs2PogKwnYjjmxcCGHTbJspYQ87N9CZJro8Oy1PBSdTGDxR5OAk3MjDqwahBiNnfszCCKapBeZnsWH9g==", "sentiment"=>"Like", "idea_id"=>"19"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "reactions" ("sentiment", "idea_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["sentiment", "Like"], ["idea_id", 19], ["created_at", 2017-06-06 00:38:27 UTC], ["updated_at", 2017-06-06 00:38:27 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/ideas/19
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/ideas/19" for ::1 at 2017-06-06 12:38:27 +1200
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+DEPRECATION WARNING: Passing an argument to force an association to reload is now deprecated and will be removed in Rails 5.1. Please call `reload_user` instead. (called from show at /Users/Jarius/Desktop/locagrid/app/controllers/ideas_controller.rb:15)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 19]]
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered ideas/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 160ms (Views: 153.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/comments" for ::1 at 2017-06-06 12:38:39 +1200
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k1OZhOlM1sz3uCVxhw5T0LXktj/LiCj33kXI7HRItdodEzjxIsD/cUQTv9oqOU66EHt2EFwepOmoPp0RcGXCwA==", "comment"=>{"body"=>"I love this so much", "idea_id"=>"19"}, "commit"=>"Create Comment"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "idea_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "I love this so much"], ["idea_id", 19], ["created_at", 2017-06-06 00:38:39 UTC], ["updated_at", 2017-06-06 00:38:39 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/ideas/19
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/ideas/19" for ::1 at 2017-06-06 12:38:39 +1200
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+DEPRECATION WARNING: Passing an argument to force an association to reload is now deprecated and will be removed in Rails 5.1. Please call `reload_user` instead. (called from show at /Users/Jarius/Desktop/locagrid/app/controllers/ideas_controller.rb:15)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 19]]
+  Rendered comments/_form.html.erb (1.6ms)
+  Rendered ideas/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 156ms (Views: 151.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/7" for ::1 at 2017-06-06 12:38:43 +1200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Sad"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Angry"]]
+  Rendered users/show.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 178ms (Views: 168.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/8" for ::1 at 2017-06-06 12:38:57 +1200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mIdea Load (0.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Angry"]]
+  Rendered users/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 149ms (Views: 143.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/ideas" for ::1 at 2017-06-06 12:39:04 +1200
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Like"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Angry"]]
+  Rendered ideas/index.html.erb within layouts/application (46.4ms)
+Completed 200 OK in 192ms (Views: 177.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/ideas/19" for ::1 at 2017-06-06 12:39:15 +1200
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+DEPRECATION WARNING: Passing an argument to force an association to reload is now deprecated and will be removed in Rails 5.1. Please call `reload_user` instead. (called from show at /Users/Jarius/Desktop/locagrid/app/controllers/ideas_controller.rb:15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 19]]
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered ideas/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 167ms (Views: 161.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/7" for ::1 at 2017-06-06 12:39:17 +1200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Like"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Love"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Sad"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Angry"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Like"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Sad"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Angry"]]
+  Rendered users/show.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 214ms (Views: 205.4ms | ActiveRecord: 4.7ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-06-06 12:42:44 +1200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BYhqCmAhPeShGzcRe4gUMdfFH+3/3kr5uZ24EVCn1MaLyMt/q60UWRKwrbrWvwlbclrfwmhIxufP5u3sVIqj3A=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-06-06 12:42:44 +1200
+Started GET "/ideas" for ::1 at 2017-06-06 12:42:44 +1200
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 18], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Love"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Confuse"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 19], ["sentiment", "Angry"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 20], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Like"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Angry"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 30], ["sentiment", "Angry"]]
+  Rendered ideas/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 178ms (Views: 172.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/user/5" for ::1 at 2017-06-06 12:42:52 +1200
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [83 times] (33.9ms)
+  Rendered /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.6ms)
+  Rendering /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (144.4ms)
+Started GET "/user/6" for ::1 at 2017-06-06 12:42:56 +1200
+  
+ActionController::RoutingError (No route matches [GET] "/user/6"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [83 times] (20.2ms)
+  Rendered /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Jarius/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (112.4ms)
+Started GET "/users/6" for ::1 at 2017-06-06 12:43:01 +1200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 21], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 22], ["sentiment", "Angry"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Like"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Love"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Sad"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Confuse"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reactions" WHERE "reactions"."idea_id" = ? AND "reactions"."sentiment" = ?[0m  [["idea_id", 23], ["sentiment", "Angry"]]
+  Rendered users/show.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 181ms (Views: 175.8ms | ActiveRecord: 2.1ms)
+
+
