@@ -32,9 +32,12 @@
 			(<%= @idea.reactions.where(sentiment: sentiment).count %>)
 			<% end %>
 		</div>
+
+		<% if !@idea.description.blank?%>
 		<div style="padding-bottom: 20px; font-family: Josefin Sans; font-size: 1.25em; line-height: 1.2em;">
 			<strong> Description: </strong> <%= @idea.description %>
 		</div> 
+		<% end %>
 	</div>
 </div>
 
